@@ -22,6 +22,27 @@ Both models are trained on a synthetic “cow” dataset and evaluated using a c
 
 ---
 
+### Installing PyTorch3D from source (required on Google Colab)
+
+If you are running this project on Google Colab, you must build PyTorch3D manually  
+because no official wheels exist for Python 3.12 + CUDA on Colab.
+
+Follow these steps:
+
+```bash
+# 1) Remove any preinstalled pytorch3d
+!pip uninstall -y pytorch3d
+
+# 2) Clone PyTorch3D at the 0.7.8 tag
+!git clone https://github.com/facebookresearch/pytorch3d.git
+%cd pytorch3d
+!git checkout v0.7.8
+
+# 3) Install dependencies and build the wheel
+!pip install -q ".[all]"
+```
+
+This works on Google Colab (T4 GPU) and takes about 10 minutes.
 ## 🚀 Running the Notebooks (Google Colab)
 
 Both notebooks are designed to run in Google Colab with GPU enabled (T4).
