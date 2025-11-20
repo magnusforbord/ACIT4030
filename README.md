@@ -32,8 +32,7 @@ Both notebooks are designed to run in Google Colab with GPU enabled (T4).
 ### 2. Mount Drive & Install Dependencies  
 The first cell:
 
-- Mounts Google Drive  
-- Chooses either *T4 wheels* or *L4 wheels*  
+- Mounts Google Drive
 - Installs PyTorch3D + dependencies  
 - Installs Gradio and Pillow for the viewer UI
 
@@ -63,7 +62,7 @@ Both notebooks follow the same pipeline:
 - MLP predicting density + color  
 - Identical structure to classic NeRF papers/repositories  
 
-### Hash-Encoded NeRF (`ACIT4030_Hash.ipynb`)
+### Hash-Encoded NeRF (`ACI030_Hash.ipynb`)
 - Multi-resolution hash grid encoder  
 - Trilinear interpolation of hashed feature corners  
 - Harmonic embedding for view direction  
