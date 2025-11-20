@@ -7,21 +7,18 @@ We implement two Neural Radiance Field (NeRF) variants:
 - **Hash-Encoded NeRF** — a multi-resolution hash grid inspired by Instant-NGP.
 
 Both models are trained on a synthetic “cow” dataset and evaluated using a custom interactive viewer with cached GPU previews, bilinear interpolation, and optional Gaussian blur.
-
----
-
-## Repository Structure
-├── ACIT4030_Baseline.ipynb       # Baseline NeRF training + viewer
-├── ACIT4030_Hash.ipynb           # Hash-based NeRF training + viewer + metrics
-├── nerf_model.py                 # NeRF + hash model implementations
-├── train_nerf.py                 # Script version of baseline training
-└── utils/
-├── generate_cow_renders.py   # Synthetic cow data generation
-├── helper_functions.py       # Loss, sampling, visualization helpers
-└── plot_image_grid.py        # Utility for displaying grids of images
-
----
-
+```text
+├── ACIT4030_Baseline.ipynb        # Baseline NeRF training + interactive viewer
+├── ACIT4030_Hash.ipynb            # Hash-based NeRF training + viewer + metrics
+│
+├── nerf_model.py                  # NeRF and hash-based NeRF implementations
+├── train_nerf.py                  # Script version of baseline training
+│
+├── utils/
+│   ├── generate_cow_renders.py    # Synthetic cow dataset generation
+│   ├── helper_functions.py        # Loss functions, ray sampling, visualization helpers
+│   └── plot_image_grid.py         # Utility for displaying grids of images
+```
 ### Installing PyTorch3D from source (required on Google Colab)
 
 If you are running this project on Google Colab, you must build PyTorch3D manually  
