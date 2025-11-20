@@ -10,7 +10,7 @@ Both models are trained on a synthetic “cow” dataset and evaluated using a c
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 ├── ACIT4030_Baseline.ipynb       # Baseline NeRF training + viewer
 ├── ACIT4030_Hash.ipynb           # Hash-based NeRF training + viewer + metrics
 ├── nerf_model.py                 # NeRF + hash model implementations
@@ -50,7 +50,7 @@ typing_extensions-4.15.0
 pytorch3d-0.7.8
 
 This works on Google Colab (T4 GPU) and takes about 10 minutes.
-## 🚀 Running the Notebooks (Google Colab)
+## Running the Notebooks (Google Colab)
 
 Both notebooks are designed to run in Google Colab with GPU enabled (T4).
 
@@ -65,7 +65,8 @@ The first cell:
 - Installs Gradio and Pillow for the viewer UI
 
 ### 3. Clone Repository  
-The notebooks automatically clone this repo into `/content/acit4030-3d-project`.
+Cell 2 clones files from assignment 2 into `/content/acit4030-3d-project`.
+Those files can also be found in this repo, but you need to change Cell 2, and adjust path if you would rather use these.
 
 ### 4. Training Flow
 
@@ -83,14 +84,14 @@ Both notebooks follow the same pipeline:
 
 ---
 
-## 🧠 Models
+## Models
 
-### Baseline NeRF (`nerf_model.py`)
+### Baseline NeRF (`ACIT4030_Baseline.ipynb`)
 - Positional encoding for positions and view directions  
 - MLP predicting density + color  
 - Identical structure to classic NeRF papers/repositories  
 
-### Hash-Encoded NeRF (`ACI030_Hash.ipynb`)
+### Hash-Encoded NeRF (`ACIT4030_Hash.ipynb`)
 - Multi-resolution hash grid encoder  
 - Trilinear interpolation of hashed feature corners  
 - Harmonic embedding for view direction  
@@ -99,7 +100,7 @@ Both notebooks follow the same pipeline:
 
 ---
 
-## 🖼️ Interactive Viewer
+## Interactive Viewer
 
 Features:
 
@@ -112,7 +113,7 @@ Features:
 
 ---
 
-## 📊 Performance Benchmarks
+## Performance Benchmarks
 
 Both notebooks include a performance measurement cell that reports:
 
@@ -126,7 +127,7 @@ These values are used to quantitatively compare baseline vs. hash NeRF.
 
 ---
 
-## 🔧 Scripts
+## Scripts
 
 ### `train_nerf.py`
 A Python script version of the baseline training loop.  
@@ -134,7 +135,7 @@ Useful for non-Colab training or batch experiments.
 
 ---
 
-## 🧩 Utilities
+## Utilities
 
 ### `generate_cow_renders.py`
 - Generates synthetic training data from a 3D cow mesh  
@@ -151,7 +152,7 @@ Useful for non-Colab training or batch experiments.
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Colab GPU RAM is limited (~15GB).  
   We tuned:
