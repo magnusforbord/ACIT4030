@@ -42,6 +42,13 @@ Follow these steps:
 !pip install -q ".[all]"
 ```
 
+The versions we used:
+portalocker-3.2.0
+iopath-0.1.10
+tqdm-4.67.1
+typing_extensions-4.15.0
+pytorch3d-0.7.8
+
 This works on Google Colab (T4 GPU) and takes about 10 minutes.
 ## 🚀 Running the Notebooks (Google Colab)
 
